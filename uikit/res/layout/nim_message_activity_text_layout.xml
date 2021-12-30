@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textMessageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/bottom_component_margin_vertical"
+    android:paddingBottom="@dimen/bottom_component_margin_vertical">
+
+    <FrameLayout
+        android:id="@+id/switchLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/bottom_component_margin_horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/buttonAudioMessage"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/icon_voice_28"
+            android:contentDescription="@string/empty"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/buttonTextMessage"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_keyboard_28"
+            android:contentDescription="@string/empty"
+            android:scaleType="center" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/audioTextSwitchLayout"
+        android:layout_width="0dip"
+        android:layout_height="44dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="@dimen/bottom_component_margin_horizontal"
+        android:layout_toLeftOf="@+id/emoji_button"
+        android:layout_toRightOf="@+id/switchLayout">
+
+
+        <Button
+            android:id="@+id/audioRecord"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/nim_message_input_edittext_box"
+            android:gravity="center"
+            android:text="@string/record_audio_start"
+            android:textColor="@color/color_black_333333"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="@dimen/bottom_component_margin_horizontal"
+        android:layout_toLeftOf="@+id/emoji_button"
+        android:layout_toRightOf="@+id/switchLayout"
+        android:autoLink="web|email|phone"
+        android:background="@drawable/message_withe_edit_fillet"
+        android:hint="输入消息"
+        android:maxHeight="72dip"
+        android:maxLines="4"
+        android:minHeight="44dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/emoji_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/bottom_component_margin_horizontal"
+        android:layout_toLeftOf="@+id/sendLayout"
+        android:background="@drawable/nim_message_input_emotion_pressed"
+        android:contentDescription="@string/empty"
+        android:scaleType="center" />
+
+    <FrameLayout
+        android:id="@+id/sendLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginRight="@dimen/bottom_component_margin_horizontal"
+        android:paddingVertical="3dp">
+
+        <TextView
+            android:id="@+id/buttonSendMessage"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/nim_message_button_bottom_send_selector"
+            android:contentDescription="@string/empty"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/buttonMoreFuntionInText"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:background="@drawable/nim_message_input_plus"
+            android:contentDescription="@string/empty"
+            android:scaleType="center" />
+    </FrameLayout>
+
+</RelativeLayout>

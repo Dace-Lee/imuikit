@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <SurfaceView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/switch_cameras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/empty"
+        android:padding="10dip"
+        android:src="@drawable/camera_change" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingTop="5dip"
+        android:paddingRight="10dip"
+        android:paddingBottom="5dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/recording_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/nim_record_start"
+            android:contentDescription="@string/empty" />
+
+        <TextView
+            android:id="@+id/record_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true"
+            android:text="00:00"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/record_btn"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dip">
+
+        <com.netease.nim.uikit.business.session.activity.CompletedView
+            android:id="@+id/record_btn_progress"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            tc:circleColor="@color/white"
+            tc:ringBgColor="#99D8D8D8"
+            tc:ringColor="@color/color_green_00d3a9"
+            tc:strokeWidth="10dip"
+            tc:viewRadius="38dip" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/record_btn_img"-->
+        <!--            android:layout_width="76dp"-->
+        <!--            android:layout_height="76dp"-->
+        <!--            android:layout_margin="10dp"-->
+        <!--            android:background="@drawable/white_circle_shape"-->
+        <!--            android:contentDescription="@string/empty" />-->
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/icon_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="50dp"
+        android:padding="10dp"
+        android:src="@drawable/icon_sq_28" />
+
+    <TextView
+        android:id="@+id/text_camera_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/record_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="轻触拍照，按住拍摄"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "imuikit"
 include ':app'
+include ':uikit'
