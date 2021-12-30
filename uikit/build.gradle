@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'android-maven'
 group='com.github.Dace-Lee'
 
 android {
@@ -77,32 +78,3 @@ dependencies {
     //implementation 'com.android.support:recyclerview-v7:28.0.0'
     //api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1' // if you want to use the Glide GPU Filters
 }
-//repositories {
-//    mavenCentral()
-//}
-//
-//def BUILD_VERSION = '0.0.1'
-//
-//// 源代码一起打包
-//task androidSourcesJar(type: Jar) {
-//    archiveClassifier.set('sources')
-//    from android.sourceSets.main.java.srcDirs
-//}
-//artifacts {
-//    archives androidSourcesJar
-//}
-//uploadArchives {
-//    repositories.mavenDeployer {
-//        //def mavenDirPath = file('../maven') //  相对地址。 编译后的代码将会存在父目录的maven文件夹下。
-//        def mavenDirPath =  file('/Users/lihaijun/Documents/uikit')  //绝对路径，编译后的代码将会存在
-//        // D盘的appmaven文件夹下。
-//        repository(url: "file:///Users/lihaijun/Documents/uikit")
-//        pom.project {
-//            groupId "com.netease.nim.uikit" // 包名
-//            artifactId "im-uikit" // module的名字
-//            version '1.0.0'// 版本号
-//            //配置完毕后，包名决定地址中的 第一项，artifactId 决定了第二项，version 决定了第三项版本号
-//            //implementation 'cn.zinyan.demo:Key:1.1.1'
-//        }
-//    }
-//}
